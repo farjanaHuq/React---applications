@@ -4,6 +4,7 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 export default function CardSlider({ slides }) {
 
   const [current, setCurrent] = useState(0);
+  
   const length = slides.length;
   console.log(length);
 
@@ -16,7 +17,7 @@ export default function CardSlider({ slides }) {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
   return (
-    <div className="container">
+    <section className="slider">
 
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
@@ -27,10 +28,11 @@ export default function CardSlider({ slides }) {
             className ={index === current ? "slide active" : "slide"}
             key={index}
           >
-            {index === current && <div className="card">{data.question}</div>}
+            {index === current && <div className="card">
+              {data.question}</div>}
           </div>
         );
       })}
-    </div>
+    </section>
   );
 }

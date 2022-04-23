@@ -5,7 +5,7 @@ import { sliderData } from './components/slider';
 
 export default function App() {
   return (
-    <div>
+    <div className='container'>
      <h1>Carousal</h1>
      <CardSlider slides={sliderData}/>
 
