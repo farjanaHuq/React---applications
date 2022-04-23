@@ -28,7 +28,7 @@ export default function StarRating({ Rating }) {
                   onMouseEnter = {() => {setHoverStar(rating)}}
                   onMouseLeave = {() => setHoverStar(null)}
                   />
-                  <FaStar className="star" size={100} color={rating <= (hoverStar | selectStar)? '#d2d221': '#555'}/>
+                  <FaStar className="star" size={100} color={rating <= (hoverStar || selectStar)? '#d2d221': '#555'}/>
                   
               </label>
             //   <span key={rate} >
